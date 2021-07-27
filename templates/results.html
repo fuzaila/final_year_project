@@ -1,0 +1,60 @@
+{% extends 'index.html' %}
+{% block body %}
+<head>
+<h3 align="center">Recommended Books</h3>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+</head>
+<style>
+     h3
+    {
+        color :salmon;
+    }
+    a:link {
+  color: salmon;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+    a:visited
+    {
+         color: salmon;
+  background-color: transparent;
+  text-decoration: none;
+    }
+table
+{
+  width: 100%;
+
+align-self: center;
+    align-content: center;
+margin: 8px 0;
+padding: 14px 20px;
+box-sizing: content-box;
+}
+</style>
+<body>
+
+<table align="center" border="1" cellpadding="15">
+  <tr>
+    <td>#</td>
+    <td>Book ID</td>
+    <td>Title</td>
+    <td>Authors</td>
+  </tr>
+  {% for i in data %}
+  <tr>
+
+    <td>{{ loop.index }}</td>
+    <td>{{i['book_id']}}</td>
+    <td>{{i['title']}}</td>
+      <td>{{i['authors']}}</td>
+  </tr>
+  {% endfor %}
+</table>
+
+
+
+</body>
+{% endblock %}

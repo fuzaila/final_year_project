@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+{% block body %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title> </title>
+</head>
+<style>
+     h3
+    {
+        color :salmon;
+    }
+    a:link {
+  color: salmon;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+    a:visited
+    {
+         color: salmon;
+  background-color: transparent;
+  text-decoration: none;
+    }
+table
+{
+  width: 100%;
+
+align-self: center;
+    align-content: center;
+margin: 8px 0;
+padding: 14px 20px;
+box-sizing: content-box;
+}
+</style>
+<div align="center">
+<form id="form1" name="form1" method="post" action="/results" enctype="multipart/form-data">
+  <table align="center">
+      <tr>
+     <td>User-id</td><td><input type="text" name="user_id"/></td>
+    </tr>
+    <tr>
+     <td>Upload csv file</td><td><input type="file" name="file"/></td>
+    </tr>
+        <td colspan="2"><input type="submit" name="submit" value="Upload"></td>
+    </tr>
+  </table>
+</form>
+</div>
+{% endblock %}
